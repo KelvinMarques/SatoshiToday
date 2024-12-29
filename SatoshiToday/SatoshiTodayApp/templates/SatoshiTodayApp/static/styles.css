@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS para remoção completa de setinhas */
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Para Firefox */
+}
+
+.navbar-brand{
+    font-weight: bold;
+
+}
+
+
+#title-2{
+    font-weight: bold;
+}
+    
+
+
+
+#typewriter {
+    font-size: 2rem; /* Ajuste o tamanho da fonte conforme necessário */
+    font-weight: 900;
+    font-family: "Roboto", sans-serif;
+    /* white-space: wrap; Evita que o texto quebre linha */
+    /* overflow: hidden; Esconde o texto que ainda não foi "digitado" */
+    /* border-right: 3px solid black; Cursor de digitação */
+    /* width: 0; Inicia com a largura zero */
+    /* animation: typing 7s steps(56) forwards, blink-caret 0.75s step-end infinite; Animações */
+    
+  }
+/*   
+  /* Animação de digitação */
+/* @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 56ch; /* Ajustado para 56 caracteres */
+    /* } */
+  /* } */ */
+  
+  /* Animação do cursor piscando */
+  /* @keyframes blink-caret { */
+    /* from, to { */
+      /* border-color: transparent; */
+    /* } */
+    /* 50% { */
+      /* border-color: black; */
+    /* } */
+  /* } */
+   /* */ */
+#box-whats-sats{
+    margin-top: 300px;
+    padding-top: 300px;
+}
+
+#box-main{
+  padding-top: 5vh;
+}
+
+
+#button-simulate{
+  width: 30%;
+}
+
+#card {
+  background-color: #ffcc00;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#select-currency {
+  margin-top: 10px;
+}
+#result {
+  font-size: 24px;
+  margin-top: 20px;
+} 

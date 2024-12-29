@@ -1,0 +1,93 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Satoshi Today</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/styles.css">
+
+</head>
+<body>
+     <!-- Navbar -->
+     <nav class="navbar navbar-light bg-light">
+        <div class="container">
+            <a id="title-1" class="navbar-brand" href="#">Satoshi <span class="text-warning" id="title-2" >Today</span></a>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">What is Sats?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">News</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="container text-center mt-5">
+        <div class="row">
+            <div id="content-title" class="col-md-6 fs-1">
+                
+                <h1 id="typewriter">Simulate your values ​​in Sats at the price you choose</h1>
+            </div>
+            <div  class="col-md-6">
+                <div id="box-main" class=" d-flex justify-content-center align-items-center pt-5 shadow card p-5 bg-warning text-dark rounded-5">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <div class="card text-center bg-warning">
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="fiat-currency"></label>
+                                        <select id="fiat-currency" class="form-control">
+                                            <option value="USD">USD</option>
+                                            <option value="EUR">EUR</option>
+                                            <option value="BRL">BRL</option>
+                                            <!-- Adicione outras opções conforme necessário -->
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group mt-3">
+                                        <label for="fiat-amount"></label>
+                                        <input placeholder="00.00" type="number" id="fiat-amount" class="form-control" placeholder="Enter amount">
+                                    </div>
+                
+                                    <div class="form-group mt-3">
+                                        <label for="satoshi-amount">${{ satoshi_amount }}</label>
+                                        <input type="number" id="satoshi-amount" class="form-control" placeholder="Result" readonly>
+                                    </div>
+                                    
+                                    <p class="mt-3">Bitcoin cotation (today): <span id="btc-cotation">${{ btc_price }}</span></p>
+                                    
+                                    <button id="simulate-btn" class="btn btn-dark mt-3">Simulate</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="adsense-main" class="mt-5 ad-banner bg-light">
+                        <p>AD</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="box-whats-sats" class="container text-center mt-5 px-10">
+        <p>What is Sats?</p>
+
+        <p>
+            "Sats" is short for Satoshis, which are the smallest unit of Bitcoin, named after its creator, Satoshi Nakamoto. A single Bitcoin can be divided into 100 million satoshis, meaning 1 satoshi (or "sat") is equal to 0.00000001 BTC. Just like cents divide the real or the dollar, satoshis divide Bitcoin, making it possible to make transactions with very small fractions of the currency, which facilitates micropayments and accessibility for those who want to buy small amounts of Bitcoin.        </div>
+
+    <script src="../static/conversor.js"></script>
+    <script src="../static/script.js"></script>
+</body>
+</html>
